@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Универ</title>
+  </head>
+  <body>
+    <div class="app">
+      <main class="wrap">
+        <section class="university">
+          <img src="/src/assets/img/interior.png" alt="Интерьер Универа"/>
+          <div class="road">
+            <div class="start">
+              <div class="start__checkpoint">
+                <button class="start__button road__point button-reset"></button>
+              </div>
+              <img src="/src/assets/img/start-label.png" alt="Первый курс" class="start__label">
+            </div>
+            <div class="road__points"></div>
+            <div class="finish">
+              <div class="finish__checkpoint">
+                <button class="finish__button road__point button-reset"></button>
+              </div>
+              <img src="/src/assets/img/finish-label.png" alt="Первый курс" class="finish__label">
+            </div>
+              <img src="/src/assets/img/girl.png" alt="Студентка" class="student">
+          </div>
+        </section>
+        <section class="navigation">
+          <div class="slider" id="slider">
+            <div class="slider__container">
+              <ul class="slider__items list-reset" id="slides">
+                <li class="slider__item slider__item--filled slider__item--add">1</li>
+                <li class="slider__item slider__item--filled">2</li>
+                <li class="slider__item slider__item--filled">3</li>
+                <li class="slider__item slider__item--filled">4</li>
+                <li class="slider__item slider__item--filled">5</li>
+                <li class="slider__item slider__item--filled">6</li>
+                <li class="slider__item slider__item--empty">7</li>
+                <li class="slider__item slider__item--empty">8</li>
+                <li class="slider__item slider__item--empty">9</li>
+                <li class="slider__item slider__item--empty">10</li>
+                <li class="slider__item slider__item--empty">11</li>
+                <li class="slider__item slider__item--empty">12</li>
+                <li class="slider__item slider__item--empty">13</li>
+              </ul>
+            </div>
+            <button class="slider__button prev-button button-reset disable"></button>
+            <button class="slider__button next-button button-reset"></button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/src/scripts/main.js"></script>
+  </body>
+</html>
