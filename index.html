@@ -2,11 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Универ</title>
   </head>
@@ -14,47 +11,82 @@
     <div class="app">
       <main class="wrap">
         <section class="university">
-          <img src="/src/assets/img/interior.png" alt="Интерьер Универа"/>
+          <img src="/src/assets/img/interior.png" alt="Интерьер Универа" />
           <div class="road">
             <div class="start">
               <div class="start__checkpoint">
                 <button class="start__button road__point button-reset"></button>
               </div>
-              <img src="/src/assets/img/start-label.png" alt="Первый курс" class="start__label">
+              <img src="/src/assets/img/start-label.png" alt="Первый курс" class="start__label" />
             </div>
             <div class="road__points"></div>
             <div class="finish">
               <div class="finish__checkpoint">
                 <button class="finish__button road__point button-reset"></button>
               </div>
-              <img src="/src/assets/img/finish-label.png" alt="Первый курс" class="finish__label">
+              <img src="/src/assets/img/finish-label.png" alt="Первый курс" class="finish__label" />
             </div>
-              <img src="/src/assets/img/girl.png" alt="Студентка" class="student">
+            <img src="/src/assets/img/girl.png" alt="Студентка" class="student" />
           </div>
         </section>
         <section class="navigation">
           <div class="slider" id="slider">
             <div class="slider__container">
               <ul class="slider__items list-reset" id="slides">
-                <li class="slider__item slider__item--filled slider__item--add">1</li>
-                <li class="slider__item slider__item--filled">2</li>
-                <li class="slider__item slider__item--filled">3</li>
-                <li class="slider__item slider__item--filled">4</li>
-                <li class="slider__item slider__item--filled">5</li>
-                <li class="slider__item slider__item--filled">6</li>
-                <li class="slider__item slider__item--empty">7</li>
-                <li class="slider__item slider__item--empty">8</li>
-                <li class="slider__item slider__item--empty">9</li>
-                <li class="slider__item slider__item--empty">10</li>
-                <li class="slider__item slider__item--empty">11</li>
-                <li class="slider__item slider__item--empty">12</li>
-                <li class="slider__item slider__item--empty">13</li>
+                <li class="slider__item slider__item--filled slider__item--add"></li>
+                <li class="slider__item slider__item--filled"></li>
+                <li class="slider__item slider__item--filled"></li>
+                <li class="slider__item slider__item--filled"></li>
+                <li class="slider__item slider__item--filled"></li>
+                <li class="slider__item slider__item--filled"></li>
+                <li class="slider__item slider__item--empty"></li>
+                <li class="slider__item slider__item--empty"></li>
+                <li class="slider__item slider__item--empty"></li>
+                <li class="slider__item slider__item--empty"></li>
+                <li class="slider__item slider__item--empty"></li>
+                <li class="slider__item slider__item--empty"></li>
+                <li class="slider__item slider__item--empty"></li>
               </ul>
             </div>
             <button class="slider__button prev-button button-reset disable"></button>
             <button class="slider__button next-button button-reset"></button>
           </div>
+          <div class="navigation-buttons__wrap">
+            <button class="navigation__button button-reset">
+              <img src="/src/assets/img/chat.png" alt="Чат" />
+            </button>
+            <button class="navigation__button navigation__button--main button-reset">
+              В универ
+            </button>
+            <button class="navigation__button button-reset">
+              <img src="/src/assets/img/mail.png" alt="Почта" />
+            </button>
+            <button class="navigation__button button-reset" id="rating-button">
+              <img src="/src/assets/img/rating.png" alt="Рейтинг" />
+            </button>
+          </div>
         </section>
+        <div class="overlay" id="overlay">
+          <div class="popup" id="rating-popup">
+            <div class="popup__header">
+              <p class="popup__title">Pейтинг игроков</p>
+            </div>
+            <button
+              class="popup__close-button button-reset"
+              id="close-rating-button"
+              aria-label="Закрыть попап"
+            ></button>
+            <div class="popup__inner-wrap">
+              <div class="popup__content popup-content" id="rating-table">
+                <div class="popup-content__header popup-header">
+                  <p class="popup-header__text">Место</p>
+                  <p class="popup-header__text">Имя Фамилия</p>
+                  <p class="popup-header__text">Опыт</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <script type="module" src="/src/scripts/main.js"></script>
