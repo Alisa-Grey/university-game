@@ -13,20 +13,31 @@
         <section class="university">
           <img src="/src/assets/img/interior.png" alt="Интерьер Универа" />
           <div class="road">
-            <div class="start">
-              <div class="start__checkpoint">
-                <button class="start__button road__point button-reset"></button>
+            <div class="road__points">
+              <div class="start">
+                <button class="start__button road__point button-reset" id="start-point"></button>
+                <img src="/src/assets/img/start-label.png" alt="Первый курс" class="start__label" />
               </div>
-              <img src="/src/assets/img/start-label.png" alt="Первый курс" class="start__label" />
-            </div>
-            <div class="road__points"></div>
-            <div class="finish">
-              <div class="finish__checkpoint">
-                <button class="finish__button road__point button-reset"></button>
+              <button class="road__point road__point--black button-reset" id="point-1"></button>
+              <span class="road__point--intermediate" id="intermediate-point-1"></span>
+              <button class="road__point road__point--black button-reset" id="point-2"></button>
+              <span class="road__point--intermediate" id="intermediate-point-2"></span>
+              <button class="road__point button-reset" id="point-3"></button>
+              <span class="road__point--intermediate" id="intermediate-point-3"></span>
+              <button class="road__point button-reset" id="point-4"></button>
+              <span class="road__point--intermediate" id="intermediate-point-4"></span>
+              <button class="road__point road__checkpoint button-reset" id="checkpoint-1"></button>
+              <span class="road__point--intermediate" id="intermediate-point-5"></span>
+              <div class="finish">
+                <button class="finish__button button-reset"></button>
+                <img
+                  src="/src/assets/img/finish-label.png"
+                  alt="Первый курс"
+                  class="finish__label"
+                />
               </div>
-              <img src="/src/assets/img/finish-label.png" alt="Первый курс" class="finish__label" />
+              <img src="/src/assets/img/girl.png" alt="Студентка" class="student" id="student" />
             </div>
-            <img src="/src/assets/img/girl.png" alt="Студентка" class="student" />
           </div>
         </section>
         <section class="navigation">
@@ -55,7 +66,10 @@
             <button class="navigation__button button-reset">
               <img src="/src/assets/img/chat.png" alt="Чат" />
             </button>
-            <button class="navigation__button navigation__button--main button-reset">
+            <button
+              class="navigation__button navigation__button--main button-reset"
+              id="move-button"
+            >
               В универ
             </button>
             <button class="navigation__button button-reset">

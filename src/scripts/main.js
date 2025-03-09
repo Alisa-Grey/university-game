@@ -23,6 +23,45 @@ const sliderTiming = {
   fill: "both",
 };
 
+const animateSlide = finalTranslateValue => {
+  slidesWrap.animate(
+    [
+      { transform: `translateX(${-slideOffset * index}px)` },
+      { transform: `translateX(${finalTranslateValue}px)` },
+    ],
+    sliderTiming,
+  );
+};
+
+const showPrevSlide = () => {
+  if (index) {
+    animateSlide(-slideOffset * index + slideOffset);
+    index -= 1;
+
+    if (!index) {
+      disableButton(prevButton);
+    }
+  }
+  if (index !== maxIndex) {
+    enableButton(nextButton);
+  }
+};
+
+const showNextSlide = () => {
+  if (index !== maxIndex) {
+    animateSlide(-(slideOffset * index + slideOffset));
+
+    index += 1;
+
+    if (index === maxIndex) {
+      disableButton(nextButton);
+    }
+  }
+  if (index !== 0) {
+    enableButton(prevButton);
+  }
+};
+
 prevButton.addEventListener("click", showPrevSlide);
 nextButton.addEventListener("click", showNextSlide);
 
@@ -34,47 +73,7 @@ const disableButton = el => {
   el.classList.add("button--disabled");
 };
 
-function showPrevSlide() {
-  if (index) {
-    slidesWrap.animate(
-      [
-        { transform: `translateX(${-slideOffset * index}px)` },
-        { transform: `translateX(${-slideOffset * index + slideOffset}px)` },
-      ],
-      sliderTiming,
-    );
-    index -= 1;
-
-    if (!index) {
-      disableButton(prevButton);
-    }
-  }
-  if (index !== maxIndex) {
-    enableButton(nextButton);
-  }
-}
-
-function showNextSlide() {
-  if (index !== maxIndex) {
-    slidesWrap.animate(
-      [
-        { transform: `translateX(${-slideOffset * index}px)` },
-        { transform: `translateX(${-(slideOffset * index + slideOffset)}px)` },
-      ],
-      sliderTiming,
-    );
-    index += 1;
-
-    if (index === maxIndex) {
-      disableButton(nextButton);
-    }
-  }
-  if (index !== 0) {
-    enableButton(prevButton);
-  }
-}
-
-// popup
+// rating popup
 const popupTiming = {
   duration: 500,
   iterations: 1,
@@ -89,7 +88,6 @@ const ratingTable = document.getElementById("rating-table");
 const renderRatingTableRow = (index, avatar, name, lastName, rating, nameCellClass) => {
   const row = document.createElement("div");
   row.classList.add("popup-content__row", "popup-row");
-  console.log("className", nameCellClass);
 
   const rowContent = `
     <p class="popup-row__text">${index}</p>
@@ -148,4 +146,53 @@ ratingButton.addEventListener("click", () => {
 
 closeRatingButton.addEventListener("click", () => {
   closePopup();
+});
+
+// student movement
+const moveButton = document.getElementById("move-button");
+const student = document.getElementById("student");
+const points = document.querySelectorAll(".road__point");
+const intermediatePoints = document.querySelectorAll(".road__point--intermediate");
+
+let mainCoords = [];
+let intermediatePointCoords = [];
+let pointIndex = 0;
+
+const studentParams = { w: student.offsetWidth, h: student.offsetHeight };
+
+const setCoordinates = (nodes, coordinatesArr) => {
+  Array.from(nodes).map(el => {
+    const x = el.offsetLeft + el.offsetWidth / 2;
+    const y = el.offsetTop + el.offsetHeight / 2;
+    coordinatesArr.push({ x, y });
+  });
+};
+
+setCoordinates(points, mainCoords);
+setCoordinates(intermediatePoints, intermediatePointCoords);
+
+moveButton.addEventListener("click", () => {
+  if (pointIndex < points.length - 1) {
+    pointIndex += 1;
+
+    student.animate(
+      [
+        { left: student.style.left, top: student.style.top },
+        {
+          left: `${intermediatePointCoords[pointIndex - 1].x - studentParams.w}px`,
+          top: `${intermediatePointCoords[pointIndex - 1].y - studentParams.h}px`,
+        },
+        {
+          left: `${mainCoords[pointIndex].x - studentParams.w / 2}px`,
+          top: `${mainCoords[pointIndex].y - studentParams.h}px`,
+        },
+      ],
+      {
+        duration: 1333,
+        iterations: 1,
+        easing: "linear",
+        fill: "both",
+      },
+    );
+  }
 });
