@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Cambria";
-  src: url(/src/assets/fonts/Cambria.woff), url(/src/assets/fonts/Cambria.woff2);
+  src: url(../assets/fonts/Cambria.woff), url(../assets/fonts/Cambria.woff2);
   src: local("Cambria");
   font-display: swap;
   font-weight: normal;
@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: "Cambria";
-  src: url(/src/assets/fonts/Cambria-Bold.woff), url(/src/assets/fonts/Cambria-Bold.woff2);
+  src: url(../assets/fonts/Cambria-Bold.woff), url(../assets/fonts/Cambria-Bold.woff2);
   src: local("Cambria Bold"), local("Cambria-Bold");
   font-display: swap;
   font-weight: bold;
@@ -57,7 +57,7 @@ body {
   position: relative;
   width: 980px;
   height: 630px;
-  background-image: url("/src/assets/img/gradient-bg.png");
+  background-image: url("../assets/img/gradient-bg.png");
 }
 .road,
 .road__points {
@@ -70,7 +70,7 @@ body {
   top: 0;
   left: 37px;
   bottom: 65px;
-  background-image: url("/src/assets/img/road.png");
+  background-image: url("../assets/img/road.png");
 }
 .road__points {
   position: relative;
@@ -82,7 +82,7 @@ body {
   width: 20px;
   height: 14px;
   border-radius: 50%;
-  background-image: url("/src/assets/img/point-grey.png");
+  background-image: url("../assets/img/point-grey.png");
   transition: box-shadow 0.2s ease-in-out;
 }
 .road__point#point-1 {
@@ -109,12 +109,12 @@ body {
   box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.569);
 }
 .road__point--black {
-  background-image: url("/src/assets/img/point-black.png");
+  background-image: url("../assets/img/point-black.png");
 }
 .road__checkpoint {
   width: 25px;
   height: 17px;
-  background-image: url("/src/assets/img/point-red.png");
+  background-image: url("../assets/img/point-red.png");
 }
 .road__point--intermediate {
   position: absolute;
@@ -161,7 +161,7 @@ body {
   z-index: 2;
 }
 .start__button {
-  background-image: url("/src//assets/img/point-start.png");
+  background-image: url("../assets/img/point-start.png");
 }
 .finish {
   position: absolute;
@@ -171,7 +171,7 @@ body {
   height: 58px;
 }
 .finish__button {
-  background-image: url("/src//assets/img/point-finish.png");
+  background-image: url("../assets/img/point-finish.png");
 }
 .finish__label {
   position: absolute;
@@ -235,7 +235,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 33.3px;
-  background-image: url("/src/assets/img/university-btn.png");
+  background-image: url("../assets/img/university-btn.png");
 }
 /* slider start */
 .slider {
@@ -246,7 +246,7 @@ body {
   gap: 12px;
   width: 536px;
   height: 63px;
-  background-image: url("/src/assets/img/slider-bg.png");
+  background-image: url("../assets/img/slider-bg.png");
 }
 .slider__container {
   position: relative;
@@ -269,11 +269,11 @@ body {
 }
 .prev-button {
   left: 8px;
-  background-image: url("/src/assets/img/arrow-left.png");
+  background-image: url("../assets/img/arrow-left.png");
 }
 .next-button {
   right: 10px;
-  background-image: url("/src/assets/img/arrow-rigth.png");
+  background-image: url("../assets/img/arrow-rigth.png");
 }
 .slider__items {
   position: absolute;
@@ -292,10 +292,10 @@ body {
   background-repeat: no-repeat;
 }
 .slider__item--empty {
-  background-image: url("/src//assets/img/slider-item-empty.png");
+  background-image: url("../assets/img/slider-item-empty.png");
 }
 .slider__item--filled {
-  background-image: url("/src//assets/img/slider-item.png");
+  background-image: url("../assets/img/slider-item.png");
 }
 .slider__item--add {
   position: relative;
@@ -307,7 +307,7 @@ body {
   right: -11px;
   width: 39px;
   height: 29px;
-  background-image: url("/src/assets/img/plus-icon.png");
+  background-image: url("../assets/img/plus-icon.png");
 }
 /* slider end */
 /* rating popup start */
@@ -331,7 +331,7 @@ body {
   width: 523px;
   height: 455px;
   padding: 94px 30px 37px;
-  background-image: url("/src/assets/img/popup-bg.png");
+  background-image: url("../assets/img/popup-bg.png");
   border-radius: 20px;
 }
 .popup__header {
@@ -340,7 +340,7 @@ body {
   height: 33px;
   top: -11px;
   left: 26%;
-  background-image: url("/src/assets/img/popup-header-bg.png");
+  background-image: url("../assets/img/popup-header-bg.png");
 }
 .popup__title {
   font-size: 24px;
@@ -355,13 +355,13 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 6px;
-  background-image: url("/src/assets/img/popup-close-btn.png");
+  background-image: url("../assets/img/popup-close-btn.png");
 }
 .popup__inner-wrap {
   width: 464px;
   height: 324px;
   padding: 32px;
-  background-image: url("/src/assets/img/popup-table-bg.png");
+  background-image: url("../assets/img/popup-table-bg.png");
   overflow-y: auto;
   scrollbar-color: #00afc6 #e4e4e4;
   scrollbar-width: thin;
@@ -391,7 +391,7 @@ body {
 }
 .popup-content__header {
   grid-template-columns: 0.7fr 2fr 0.5fr;
-  background-image: url("/src/assets/img/popup-table-header-bg.png");
+  background-image: url("../assets/img/popup-table-header-bg.png");
 }
 .popup-header__text {
   font-size: 12px;
@@ -400,7 +400,7 @@ body {
 }
 .popup-content__row {
   grid-template-columns: 0.4fr 34px 2fr 0.5fr;
-  background-image: url("/src/assets/img/popup-table-row-bg.png");
+  background-image: url("../assets/img/popup-table-row-bg.png");
 }
 .popup-row__text {
   font-size: 14px;

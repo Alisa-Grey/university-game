@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Универ</title>
   </head>
@@ -11,12 +10,16 @@
     <div class="app">
       <main class="wrap">
         <section class="university">
-          <img src="/src/assets/img/interior.png" alt="Интерьер Универа" />
+          <img src="./src/assets/img/interior.png" alt="Интерьер Универа" />
           <div class="road">
             <div class="road__points">
               <div class="start">
                 <button class="start__button road__point button-reset" id="start-point"></button>
-                <img src="/src/assets/img/start-label.png" alt="Первый курс" class="start__label" />
+                <img
+                  src="./src/assets/img/start-label.png"
+                  alt="Первый курс"
+                  class="start__label"
+                />
               </div>
               <button class="road__point road__point--black button-reset" id="point-1"></button>
               <span class="road__point--intermediate" id="intermediate-point-1"></span>
@@ -31,12 +34,12 @@
               <div class="finish">
                 <button class="finish__button button-reset"></button>
                 <img
-                  src="/src/assets/img/finish-label.png"
+                  src="./src/assets/img/finish-label.png"
                   alt="Первый курс"
                   class="finish__label"
                 />
               </div>
-              <img src="/src/assets/img/girl.png" alt="Студентка" class="student" id="student" />
+              <img src="./src/assets/img/girl.png" alt="Студентка" class="student" id="student" />
             </div>
           </div>
         </section>
@@ -64,7 +67,7 @@
           </div>
           <div class="navigation-buttons__wrap">
             <button class="navigation__button button-reset">
-              <img src="/src/assets/img/chat.png" alt="Чат" />
+              <img src="./src/assets/img/chat.png" alt="Чат" />
             </button>
             <button
               class="navigation__button navigation__button--main button-reset"
@@ -73,10 +76,10 @@
               В универ
             </button>
             <button class="navigation__button button-reset">
-              <img src="/src/assets/img/mail.png" alt="Почта" />
+              <img src="./src/assets/img/mail.png" alt="Почта" />
             </button>
             <button class="navigation__button button-reset" id="rating-button">
-              <img src="/src/assets/img/rating.png" alt="Рейтинг" />
+              <img src="./src/assets/img/rating.png" alt="Рейтинг" />
             </button>
           </div>
         </section>
@@ -103,6 +106,6 @@
         </div>
       </main>
     </div>
-    <script type="module" src="/src/scripts/main.js"></script>
+    <script type="module" src="./src/scripts/main.js"></script>
   </body>
 </html>
